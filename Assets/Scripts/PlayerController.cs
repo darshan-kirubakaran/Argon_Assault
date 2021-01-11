@@ -4,21 +4,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-public class Player : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
-    [Tooltip("In ms^-1")] [SerializeField] float speed = 4f;
+    [Header("General")]
+    [Tooltip("In ms^-1")] [SerializeField] float conrolSpeed = 4f;
     [Tooltip("In m")] [SerializeField] float xRange = 2f;
     [Tooltip("In m")] [SerializeField] float yRange = 1.296f;
     [Tooltip("In m")] [SerializeField] float minY = -1.228f;
     [Tooltip("In m")] [SerializeField] float maxY = 1f;
 
+    [Header("Screen-position Based")]
     [SerializeField] float positionPitchFactor = -12.6f;
     [SerializeField] float positionYawFactor = -12.6f;
+
+    [Header("Control-throw Based")]
     [SerializeField] float controlPitchFactor = -12.6f;
     [SerializeField] float controlRollFacter = -5f;
 
     float xThrow;
     float yThrow;
+    bool isControlEnabled = true;
 
     // Start is called before the first frame update
     void Start()
@@ -29,9 +34,16 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ProcessTranslation();
-        ProcessRotation();
+        if (isControlEnabled)
+        {
+            ProcessTranslation();
+            ProcessRotation();
+        }
+    }
 
+    void OnPlayerDeath() // called by string reference
+    {
+        isControlEnabled = false;
     }
 
     private void ProcessRotation()
@@ -51,8 +63,8 @@ public class Player : MonoBehaviour
         xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
         yThrow = CrossPlatformInputManager.GetAxis("Vertical");
 
-        float xOffset = xThrow * speed * Time.deltaTime;
-        float yOffset = yThrow * speed * Time.deltaTime;
+        float xOffset = xThrow * conrolSpeed * Time.deltaTime;
+        float yOffset = yThrow * conrolSpeed * Time.deltaTime;
 
         float rawXPos = transform.localPosition.x + xOffset;
         float rawYPos = transform.localPosition.y + yOffset;

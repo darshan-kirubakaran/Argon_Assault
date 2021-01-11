@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2390030350161380736
+--- !u!1 &4831005438212703510
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,24 +8,25 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 9171053649324158764}
-  - component: {fileID: 2851361823611229264}
-  - component: {fileID: 1622414728407197685}
-  - component: {fileID: 4386295819228904014}
+  - component: {fileID: 2118409937467453370}
+  - component: {fileID: 5022120866135577798}
+  - component: {fileID: 8404776490661652323}
+  - component: {fileID: 6845325094194576088}
+  - component: {fileID: 2926624226969463421}
   m_Layer: 0
-  m_Name: Explosion
+  m_Name: Enemy Explosion VFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &9171053649324158764
+--- !u!4 &2118409937467453370
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2390030350161380736}
+  m_GameObject: {fileID: 4831005438212703510}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0.02, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
@@ -33,13 +34,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!198 &2851361823611229264
+--- !u!198 &5022120866135577798
 ParticleSystem:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2390030350161380736}
+  m_GameObject: {fileID: 4831005438212703510}
   serializedVersion: 6
   lengthInSec: 0.5
   simulationSpeed: 1
@@ -226,18 +227,18 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0, g: 0.42352945, b: 0.8000001, a: 1}
-        key1: {r: 1, g: 1, b: 1, a: 1}
-        key2: {r: 1, g: 1, b: 1, a: 0}
-        key3: {r: 1, g: 1, b: 1, a: 0}
-        key4: {r: 1, g: 1, b: 1, a: 0}
-        key5: {r: 1, g: 1, b: 1, a: 0}
+        key0: {r: 1, g: 0, b: 0, a: 1}
+        key1: {r: 0.7830189, g: 0.36136523, b: 0.05540227, a: 1}
+        key2: {r: 1, g: 0.97972137, b: 0.007843137, a: 0}
+        key3: {r: 0.7843138, g: 0.36078432, b: 0.054901965, a: 0}
+        key4: {r: 1, g: 0.015686275, b: 0.015686275, a: 0}
+        key5: {r: 1, g: 0.015686275, b: 0.015686275, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
-        ctime0: 30647
-        ctime1: 65535
-        ctime2: 65535
-        ctime3: 65535
+        ctime0: 0
+        ctime1: 16577
+        ctime2: 22166
+        ctime3: 26985
         ctime4: 65535
         ctime5: 65535
         ctime6: 0
@@ -251,7 +252,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
-        m_NumColorKeys: 2
+        m_NumColorKeys: 5
         m_NumAlphaKeys: 2
       minGradient:
         serializedVersion: 2
@@ -4691,14 +4692,14 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!199 &1622414728407197685
+--- !u!199 &8404776490661652323
 ParticleSystemRenderer:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2390030350161380736}
+  m_GameObject: {fileID: 4831005438212703510}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -4755,13 +4756,13 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!82 &4386295819228904014
+--- !u!82 &6845325094194576088
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2390030350161380736}
+  m_GameObject: {fileID: 4831005438212703510}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -4851,3 +4852,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2926624226969463421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4831005438212703510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8093d32c8b0c34e4982b39d3606fc492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
