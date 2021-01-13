@@ -103,6 +103,7 @@ MonoBehaviour:
   yRange: 1.5
   minY: -1.34
   maxY: 1.34
+  guns: []
   positionPitchFactor: -12.6
   positionYawFactor: 12.6
   controlPitchFactor: -20
@@ -235,7 +236,7 @@ PrefabInstance:
     - target: {fileID: 4578901816847843828, guid: eb2b4023cf893964080de1029fc66c2e,
         type: 3}
       propertyPath: m_Name
-      value: Bullets (1)
+      value: Gun Left
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb2b4023cf893964080de1029fc66c2e, type: 3}
@@ -416,7 +417,7 @@ PrefabInstance:
     - target: {fileID: 4578901816847843828, guid: eb2b4023cf893964080de1029fc66c2e,
         type: 3}
       propertyPath: m_Name
-      value: Bullets
+      value: Gun Right
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb2b4023cf893964080de1029fc66c2e, type: 3}
